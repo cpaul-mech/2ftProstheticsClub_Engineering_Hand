@@ -10,9 +10,10 @@ int OffOn;
 void setup()
 {
     // put your setup code here, to run once:
-    pinMode(11, OUTPUT);
-    pinMode(10, OUTPUT);
-    pinMode(7, INPUT);
+    Serial.begin(9600);
+    pinMode(MotorDirectionA, OUTPUT);
+    pinMode(MotorDirectionB, OUTPUT);
+    pinMode(MotorOffOn, INPUT); //switch
     myServo.attach(SERVO_PIN);
     myServo.write(150);
 }
@@ -21,12 +22,13 @@ void loop()
 {
 
     OffOn = digitalRead(MotorOffOn);
+    Serial.println(OffOn);
     if (OffOn == 1)
     {
         digitalWrite(MotorDirectionA, HIGH);
         digitalWrite(MotorDirectionB, LOW);
     }
-    else
+    else if(OffOn == 0)
     {
         digitalWrite(MotorDirectionB, HIGH);
         digitalWrite(MotorDirectionA, LOW);
