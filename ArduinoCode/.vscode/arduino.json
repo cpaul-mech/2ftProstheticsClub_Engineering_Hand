@@ -1,7 +1,0 @@
-{
-    "configuration": "cpu=atmega328",
-    "board": "arduino:avr:nano",
-    "programmer": "avrispmkii",
-    "port": "COM3",
-    "sketch": "AlexsArduinoCode\\AlexsArduinoCode.ino"
-}
