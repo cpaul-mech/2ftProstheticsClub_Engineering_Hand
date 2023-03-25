@@ -2,5 +2,6 @@
     "configuration": "cpu=atmega328old",
     "board": "arduino:avr:nano",
     "programmer": "avrispmkii",
-    "sketch": "ArduinoCode\\NewDoubleButtonCode\\NewDoubleButtonCode.ino"
+    "sketch": "ArduinoCode\\NewDoubleButtonCode\\NewDoubleButtonCode.ino",
+    "port": "COM3"
 }

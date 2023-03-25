@@ -39,6 +39,7 @@ void loop()
         {
             digitalWrite(MotorDirectionA, LOW);
             digitalWrite(MotorDirectionB, HIGH);
+            motorstate = GOBACKWARD;
         }
         break;
     case GOFORWARD:
